@@ -1,4 +1,4 @@
-# Perintah
+# Command :
       $ pkg update && upgrade
       $ pkg install git
       $ pkg install python2
