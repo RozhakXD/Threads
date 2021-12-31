@@ -12,7 +12,8 @@
       $ git pull
       $ python dump.py
 # Sosial Media
-      • Fb : https://free.facebook.com/rozhak.xyz
+      • Fb : https://www.facebook.com/rozhak.xyz
+      • Fb : https://www.facebook.com/muhammad.rozhak.official
       • Ig : https://www.instagram.com/rozhak_official
       • Yt : https://www.youtube.com/rozhakid
       • Wa : https://wa.me/6283847921480
