@@ -1,5 +1,5 @@
 #!/usr/bin/python
-import os,re,sys,bs4,time,random,datetime,requests
+import os,re,sys,time,random,datetime,requests
 from concurrent.futures import ThreadPoolExecutor
 from requests.exceptions import ConnectionError
 from bs4 import BeautifulSoup as parser
