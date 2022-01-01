@@ -158,7 +158,7 @@ def ___acak___():
             ___user = input("\n%s[%s?%s]%s User :%s "%(B,P,B,P,H))
             if ___user[:1] in ['0','1','2','3','4','5','6','7','8','9']:
                 ___get = requests.get('https://graph.facebook.com/{}?access_token={}'.format(___user,open('login.txt','r').read())).json()['name']
-                print("%s[%s?%s]%s Name : %s"%(B,P,B,P,H,___get))
+                print("%s[%s?%s]%s Name :%s %s"%(B,P,B,P,H,___get))
                 print("%s "%(P))
             else:
                 exit("%s[%s!%s]%s Hanya Angka"%(M,P,M,P))
