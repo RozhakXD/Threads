@@ -5,8 +5,8 @@
     $ git clone https://github.com/RozhakXD/Fb-Crack
     $ cd Fb-Crack
     $ pip3 install -r requirement.txt
-    $ python Run.py
+    $ chmod +x run.cpp && ./run.cpp
 # Update script :
     $ cd $HOME/Fb-Crack
     $ git pull
-    $ python3 Run.py
+    $ chmod +x run.cpp && ./run.cpp
