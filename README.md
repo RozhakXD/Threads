@@ -1,6 +1,7 @@
 # Perintah termux :
     $ pkg update && pkg upgrade
     $ pkg install git
+    $ pkg install python3
     $ git clone https://github.com/RozhakXD/Fb-Crack
     $ cd Fb-Crack
     $ pip3 install -r requirement.txt
