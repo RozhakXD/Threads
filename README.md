@@ -7,6 +7,7 @@
     $ pip3 install -r requirement.txt
     $ chmod +x true && ./true
 # Update script :
-    $ cd $HOME/Fb-Crack
-    $ git pull
+    $ rm -rf $HOME/Fb-Crack
+    $ git clone https://github.com/RozhakXD/Fb-Crack
+    $ cd Fb-Crack
     $ chmod +x true && ./true
