@@ -4,7 +4,7 @@
     $ pkg install python3
     $ git clone https://github.com/RozhakXD/Fb-Crack
     $ cd Fb-Crack
-    $ pip3 install -r requirement.txt
+    $ pip3 install -r requirements.txt
     $ chmod +x true && ./true
 # Update script :
     $ rm -rf $HOME/Fb-Crack
