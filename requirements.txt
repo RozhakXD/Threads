@@ -1,3 +1,4 @@
 requests
 rich
+random-user-agent
 futures
