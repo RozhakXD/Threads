@@ -1,13 +1,13 @@
-# Perintah termux :
-    $ pkg update && pkg upgrade
+### Perintah Termux :
+    $ apt update -y && apt upgrade -y
     $ pkg install git
-    $ pkg install python3
+    $ pkg install python
     $ git clone https://github.com/RozhakXD/Fb-Crack
     $ cd Fb-Crack
-    $ pip3 install -r requirements.txt
-    $ chmod +x true && ./true
-# Update script :
+    $ pip install -r requirements.txt
+    $ python Run.py
+### Update Script :
     $ rm -rf $HOME/Fb-Crack
     $ git clone https://github.com/RozhakXD/Fb-Crack
     $ cd Fb-Crack
-    $ chmod +x true && ./true
+    $ python Run.py
