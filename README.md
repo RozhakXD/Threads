@@ -12,7 +12,7 @@ Threads v1.0 unleashes a ruthless arsenal: infiltrate Threads accounts with stea
 ```
 $ apt update -y && apt upgrade -y
 $ pkg install git python-pip
-$ git clone --depth 1 https://github.com/RozhakXD/Threads.git
+$ git clone --depth 1 https://github.com/RozhakDev/Threads.git
 $ cd "Threads"
 $ python -m pip install -r requirements.txt
 $ chmod +x Run
